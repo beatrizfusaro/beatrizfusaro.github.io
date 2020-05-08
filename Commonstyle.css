@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: "Excelsior", "Book Antiqua", Palatino, serif;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 15%;
+	margin-right: 15%;
+	width: 70%;
+	color: #070502;
+	background-color: #f0f0f0;
+}
+
+footer {
+	clear: both;
+    position: relative;
+    height: 100px;
+    margin-top: -100px;
+}
+
+h4 {
+	color: #070502;
+	font-size: 0.75em;
+	text-align: center;
+	margin: 0px;
+	padding-top: 100px;
+}
+
+#aboutpage {
+	margin: 0px;
+	clear: both;
+}
+
+#aboutcontainer {
+	width: 60%;
+	margin: 0px;
+	margin-left: 5%;
+	padding: 0px;
+	float: left;
+}
+
+#blocker {
+	margin: 0px;
+	width: 100%;
+	padding: 0px;
+	float: none;
+	clear: both;
+}
+
+#profile {
+	display: block;
+    margin: 0px;
+	padding: 0px;
+	width: 30%;
+	border: thick solid #FFECC9;
+	float: left;
+}
+
+#icon {
+	width: 30px;
+	float: right;
+	margin: 0px;
+	margin-right: 10px;
+}
+
+a.link {
+  	color: #070502;
+  	font-weight: bold;
+  	text-decoration: underline;
+}
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  font-family: "Excelsior", "Book Antiqua", Palatino, serif;
+  border-bottom: thin solid #070502;
+  background-color: #f0f0f0;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: #070502;
+  text-align: center;
+  padding: 14px 16px 4px 16px;
+  text-decoration: none;
+}
+
+/* Links inside the navbar */
+a.title {
+  float: left;
+  font-size: 20px;
+  color: #070502;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px 4px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #070502;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f0f0f0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: #070502;
+  padding: 12px 16px 4px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: thin solid #070502;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.row {
+    margin-top: 12px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.frame {
+    text-align: center; 
+    foat: left;
+	clear: none;
+    cursor: pointer;
+	width: 30%;
+	margin: 0px;
+	padding: 0px;
+    perspective: 500px; 
+}
+.frame img {
+    height: 60vh;
+	width: 100%;
+	object-fit: cover;
+}
+.frame .details {
+    width: 70%;
+    height: 80%;    
+    padding: 5% 8%;
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(90deg);
+    transform-origin: 50%;
+    background: rgba(255,255,255,0.9);  
+    opacity: 0;
+    transition: all 0.4s ease-in;
+    
+}
+.frame:hover .details {
+    transform: translate(-50%, -50%) rotateY(0deg);
+    opacity: 1;
+}
+

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MedImg</title>
+<link href="Commonstyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="navbar">
+	  <a href="Home.html" class="title">Beatriz Fusaro</a>
+	  <a href="About.html">About</a>
+	  <div class="dropdown">
+		<button class="dropbtn">
+			<a href="Designer.html">Designer</a>
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="Animation.html">Animation and Graphics Design for Siemens</a>
+		  <a href="UIDesign.html">UI Design for SCBA Monitoring</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">
+			<a href="Engineer.html">Engineer</a>
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="AgRobot.html">Agricultural Robot for Monsanto</a>
+		  <a href="FruitPicker.html">Fruit Picker with NIRS for GTRI</a>
+		  <a href="Battlebots.html">Battlebots for Robojackets</a>
+		</div>
+  	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">
+			<a href="Researcher.html">Researcher</a>
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="MedImg.html">Medical Image Visualization for Siemens</a>
+		  <a href="Deblur.html">Deblurring for Biorobotics Lab</a>
+		</div>
+  	  </div>
+	  
+	</div>
+	
+	<h2>Medical Image Visualization for Siemens</h2>
+	
+	<p>Siemens Healthcare recently developed a new type of MRI machine capable of giving numerical results for each of the measured tissue variables. With this in mind, I was tasked with creating a new visualization method capable of leveraging this data, allowing doctors to more easily identify issues with the normal tissue.</p>
+	
+	<p>Starting by researching current literature on visualization methods, I found promise in papers on bacteria and petri dish analysis. Using a similar approach, I created a preliminary algorithm that simply assigned the value of a variable to a color channel, resulting in characteristic hues for each kind of tissue. This program proved to be very useful in identifying different structures on the image. For example, bone would show in yellow, while white matter was a light pink. Despite this, tumors and bleeds had a similar composition to the brain matter around it, so I needed to refine this algorithm to show a better hue contrast.</p>
+	
+	
+	
+	<p>After testing with several datasets, I decided to use clustering and assign hues based on the distance of a variable set to a cluster’s center. This approach allowed me to individually manipulate the color of each physiological structure, which resulted in a clear distinction between healthy tissue and tumors.</p>
+	
+	<p>Because of the novelty of both of these approaches, I wrote and applied for a <a class="link" href="https://patents.google.com/patent/US20190108633A1/en" target="_blank">patent</a> on behalf of Siemens, and it was finally published in April 2019.</p>
+
+	
+	<footer>
+	</footer>
+</body>
+</html>

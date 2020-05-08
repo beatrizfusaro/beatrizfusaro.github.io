@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<link href="Stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<script>
+	function change(val) {
+		var pic;
+		var text;
+		if (val == 1) {
+			pic = "Researcher.jpg";
+			text = "Research is the forefront of progress, the first step to innovation";
+		} else if (val == 2) {
+			pic = "Designer.jpg";
+			text = "Animations, Visual Arts and UI Design";
+		} else if (val == 3) {
+			pic = "Engineer.jpg";
+			text = "From coding to machining, engineering is about creation";
+		} else {
+			pic = "FrontBanner.jpg";
+			text = "Introducing Beatriz Fusaro";
+		}
+		document.getElementById("banner").src = pic;
+		document.getElementById("titleCard").innerHTML = text;
+	}
+	</script>
+	<img id="banner" src="FrontBanner.jpg" />
+	<h2 id="titleCard"> Introducing Beatriz Fusaro </h2>
+	<div id="blocker">
+		<div id=container onmouseover="change(1)" onmouseout="change(0)">
+			<a href="Researcher.html">Researcher.</a>
+		</div>
+		<div id=container onmouseover="change(3)" onmouseout="change(0)">
+			<a href="Engineer.html">Engineer.</a>
+		</div>
+		<div id=container onmouseover="change(2)" onmouseout="change(0)">
+			<a href="Designer.html">Designer.</a>
+		</div>
+	</div>
+	
+	<div id="aboutpage">
+		<div id="blocker">
+			<img id="profile" src="Profile.jpg" />
+			<div id="aboutcontainer"> 
+				<h3> About </h3>
+				<p> Born in Brazil, to a lively Italian family, I grew up tinkering with robotics. With an interest in innovation, I decided to expand my knowledge in the field by studying Mechanical Engineering with a minor in Computer Science at Georgia Tech. After working in several innovation departments, I joined a content development with UC Berkeley to gain experience in ideation and storytelling. Currently working at Xpanse AI, a predictive modelling startup, I am developing instructive videos in data science. After this experience, I hope to leverage my robotics and content skills to be an integral part of an innovation and development team.</p>
+				<a href="https://www.linkedin.com/in/beatriz-fusaro5240a21/" target="_blank" alt="Linkedin">
+				<img id=icon src="Linkedin_icon.svg">
+				</a>
+				<a href="https://www.facebook.com/profile.php?id=100009676620091" target="_blank" alt="Facebook">
+				<img id=icon src="Facebook_icon.png">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<footer>
+		<h4> Contact me at beatrizfusaro@gmail.com </h4>
+	</footer>
+	
+</body>
+</html>
