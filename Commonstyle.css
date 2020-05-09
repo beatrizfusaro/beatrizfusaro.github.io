@@ -27,6 +27,16 @@ h4 {
 	padding-top: 100px;
 }
 
+h6 {
+	font-size: 0.75em;
+	text-align: center;
+	font-weight: normal;
+	margin-top: 1em;
+  	margin-bottom: 2.33em;
+  	margin-left: 0;
+  	margin-right: 0;
+}
+
 #aboutpage {
 	margin: 0px;
 	clear: both;
@@ -156,14 +166,19 @@ a.title {
     margin-top: 12px;
 	margin-left: 5%;
 	margin-right: 5%;
+	clear: none;
+}
+
+.container {
+	float: left;
+	width: 45%;
+	clear: none;
+	padding: 2.5%;
 }
 
 .frame {
-    text-align: center; 
-    foat: left;
-	clear: none;
-    cursor: pointer;
-	width: 30%;
+    text-align: center;
+	width: 100%;
 	margin: 0px;
 	padding: 0px;
     perspective: 500px; 
