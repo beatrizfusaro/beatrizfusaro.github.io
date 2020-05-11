@@ -2,9 +2,64 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>AgRobot</title>
+<link href="Commonstyle.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+	<div class="navbar">
+	  <a href="index.html" class="title">Beatriz Fusaro</a>
+	  <a href="About.html">About</a>
+	  <div class="dropdown">
+		<button class="dropbtn">
+			<a href="Designer.html">Designer</a>
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="Animation.html">Animation and Graphics Design for Siemens</a>
+		  <a href="UIDesign.html">UI Design for SCBA Monitoring</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">
+			<a href="Engineer.html">Engineer</a>
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="AgRobot.html">Agricultural Robot for Monsanto</a>
+		  <a href="FruitPicker.html">Fruit Picker with NIRS for GTRI</a>
+		  <a href="Battlebots.html">Battlebots for Robojackets</a>
+		</div>
+  	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">
+			<a href="Researcher.html">Researcher</a>
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="MedImg.html">Medical Image Visualization for Siemens</a>
+		  <a href="Deblur.html">Deblurring for Biorobotics Lab</a>
+		</div>
+  	  </div>
+	</div>
+	
+	<h2>Agricultural Robot for Monsanto</h2>
+	
+	<p>Monsanto’s digital agriculture subsidiary, The Climate Corporation, desired to create a robot capable of automatedly traverse crops and catalogue plant health and inventory. Corn crops suffer greatly with weeds in the early growth stages, and with common crop diseases in later stages. However, it is hard to keep track of these issues due to the extraordinary size of the fields most farms must work with. Climate’s proposal was the creation of a robot capable of mapping these issues, so that farmers could identify early onsets of crop diseases and reduce chemicals used in the field. I was responsible for designing the software to guide this robot and make it able to discern weeds and diseases.
+
+	<p>The first step in creating an automated robot is to decide how to implement the navigation. This robot received an integrated GPS and odometry system, but the positioning accuracy was still not in the desired centimeter order of magnitude. To increase accuracy, I fused this data with the parallax data from a camera, as described in the image below. This allowed for precise positioning without increasing the costs.</p>
+	
+	<img src="Visual_Odometry.jpg" style="display: block; margin-right: auto; margin-left: auto; width: 80%;">
+	<h6>Representation of the visual odometry process, where the change in size of an object is correlated to a distance traveled</h6> 
+	
+	<p>When it comes to detecting weeds and diseases, computer vision is essential. I firstly approached this issue by using a deep neural network, but the training time was not optimal. Trying a simpler approach, I decided to normalize the images with a directed histogram and label the images with a support vector machine. By training an SVM with imaged of weeds and corn sprouts, I was able to achieve a 90% weed identification. The same approach can be extended to detecting diseases that manifest in the corn leaves.</p>
+	
+	<img src="Weed detection.jpg" style="display: block; margin-right: auto; margin-left: auto; width: 40%;">
+	<h6>Algorithm visualization for weed detection in robot-captured image</h6> 
+
+	<p>The program developed was successfully tested in simulations and forwarded to be implemented with the physical robot.
+	</p>
+	
+	
 </body>
 </html>

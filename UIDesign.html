@@ -2,9 +2,66 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>UIDesign</title>
+<link href="Commonstyle.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+	<div class="navbar">
+	  <a href="index.html" class="title">Beatriz Fusaro</a>
+	  <a href="About.html">About</a>
+	  <div class="dropdown">
+		<button class="dropbtn">
+			<a href="Designer.html">Designer</a>
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="WRC.html">Webdesign and Social Media Campaign for WRC</a>
+		  <a href="UIDesign.html">UI Design for SCBA Monitoring</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">
+			<a href="Engineer.html">Engineer</a>
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="AgRobot.html">Agricultural Robot for Monsanto</a>
+		  <a href="FruitPicker.html">Fruit Picker with NIRS for GTRI</a>
+		  <a href="Battlebots.html">SumoBot for Robojackets</a>
+		</div>
+  	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">
+			<a href="Researcher.html">Researcher</a>
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="MedImg.html">Medical Image Visualization for Siemens</a>
+		  <a href="Deblur.html">Deblurring for Biorobotics Lab</a>
+		</div>
+  	  </div>
+	  
+	</div>
+	
+	<h2>UI Design for SCBA Monitoring App</h2>
+	
+	<img src="SCBA_Apparatus.jpg" style="width:25%;float:right;margin-left: 10%;margin-bottom: 20px;margin-right: 10%">
+	
+	<p>One of the main risks firefighters suffer from is the possibility of running out of oxygen before leaving the site. The current SCBA systems have an oxygen level monitoring system that consists only of an alarm when the tank is running low, which can easily go unheard by the firefighter. As my capstone project, I designed a new monitoring apparatus that can predict the remaining time with oxygen and send real time information to the commander to better the workflow of the firefighting unit. One of the main challenges of this project was designing the user interface for the monitoring app. It needed to be easy to understand, attract attention to firefighters potentially at risk, and still show all of the broadcasted information.</p>
+	
+	<p>The first step in creating the app was researching all of the requirements. I interviewed three firefighter commanders and asked them what kinds of metrics they would like to have to monitor their subordinates while on the field. They indicated the desire to know the oxygen levels and estimated remaining time, as well as the photo and name of each firefighter to identify them more easily. They also expressed the need for an alarm for when an individual’s tank is running too low.</p>
+	
+	<img src="UI_Example.jpg" style="display: block; margin-right: auto; margin-left: auto; width: 90%; margin-bottom:30px;">
+	
+	<p>After the first draft of the app, I asked for feedback from my original interviewees, and noticed a need to make it simpler. I changed the design of the monitor to show each firefighter in a card, instead of them all in a list, and ordered them in terms of priority (remaining oxygen time). Each card was then colored based on the oxygen level in the tank. This made it easier for commanders to understand the situation at a glance and make quick decisions.</p>
+	
+	<img src="UI_Review.jpg" style="display: block; margin-right: auto; margin-left: auto; width: 90%; margin-bottom:30px;">
+	
+	<p>In the first draft of the app, there was a window used only to add new firefighters to the database. To streamline this process, I made it so the new firefighter window would only show when an unknown ID was connected and added the tap and hold functionality to edit personal data at any time.</p>
+
+	<p>The app and system were presented at the 2019 Capstone Expo, at Georgia Tech, and gathered several good reviews. According to one visiting firefighter, “this whole system could be a lifesaver. I hope it gets put in production”.</p>
+
+
 </body>
 </html>

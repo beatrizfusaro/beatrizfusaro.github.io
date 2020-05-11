@@ -2,9 +2,68 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Battlebots</title>
+<link href="Commonstyle.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+	<div class="navbar">
+	  <a href="index.html" class="title">Beatriz Fusaro</a>
+	  <a href="About.html">About</a>
+	  <div class="dropdown">
+		<button class="dropbtn">
+			<a href="Designer.html">Designer</a>
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="WRC.html">Webdesign and Social Media Campaign for WRC</a>
+		  <a href="UIDesign.html">UI Design for SCBA Monitoring</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">
+			<a href="Engineer.html">Engineer</a>
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="AgRobot.html">Agricultural Robot for Monsanto</a>
+		  <a href="FruitPicker.html">Fruit Picker with NIRS for GTRI</a>
+		  <a href="Battlebots.html">SumoBot for Robojackets</a>
+		</div>
+  	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">
+			<a href="Researcher.html">Researcher</a>
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="MedImg.html">Medical Image Visualization for Siemens</a>
+		  <a href="Deblur.html">Deblurring for Biorobotics Lab</a>
+		</div>
+  	  </div>
+	  
+	</div>
+	
+	<h2>SumoBot for Robojackets</h2>
+	
+	<p>One of the competitions where Robojackets, Georgia Tech’s main competitive robotics team, regularly creates robots for is the <a class="link" href="https://www.fsi.co.jp/sumo/en/index.html" target="_blank">All Japan Robot Sumo Tournament</a>. Robotic sumo happens in a circular metal platform, where two robots try to push each other out of the rink. Because the platform is metallic, these robots count with an array of magnets capable of giving it more weight and stability. The robots need to be able to sense their opponents and dynamically strategize their movements. I was tasked in designing the robot and algorithm used in the 2018’s tournament. </p>
+	
+	<p>There are three main challenges in designing a sumo bot: include the largest amount of magnets without exceeding the maximum weight or making the robot too heavy to steer, accurately sense and react to the opponent, and keep track of its own position in the arena. </p>
+	
+	<img src="sumo-tournament.jpg" style="display: block; margin-right: auto; margin-left: auto; width: 60%;">
+	<h6>Sumo Arena in All Japan Robot Sumo Tournament 2018</h6> 
+	
+	<p>The design of the magnet bed was defined after weeks of experimentation. The final design has a larger concentration of magnets in the center of the robot and away of the wheels, to reduce the strain on the motors.</p>
+
+	<p>To sense the other robot, there are three sensors that could be used: ultraviolet, infrared and time of flight sensors. After testing each in terms of accuracy and refreshing time, it became apparent that the time of flight sensors would yield the desired precision at the rapid frame rate required by the strategy program. This program was the result of several weeks of planning. It had to be a lightweight algorithm, that could be run on a simple Arduino mini, while still making use of all the input data to intelligently calculate the best methods to push its opponent away. It consists of a complex state machine, that associates the predicted positioning of the robot to the detected distance and velocity of the opponent, while taking into account the strain of the motor, and decided on the best approach (when to run away, press forward, retreat and move in a different angle or reverse its path to avoid leaving the rink).</p> 
+
+	<p>Odometry on such a small robot is another system difficult to implement accurately. With no space in the chassis to include an encoder, I designed a fixture with hall effect sensors, that could keep up with the high-speed rotation of the wheels and still give relevant information. To make sure that the robot would notice the border of the arena, I added a reflectance sensor on all four corners of the robot, which can see the white border lining the rink.</p>
+	
+	<img src="Sumobot.jpg" style="display: block; margin-right: auto; margin-left: auto; width: 60%;">
+	<h6>Robojackets' robot, Gucci, winning in match against Japanese team Team Q </h6> 
+
+	<p>The robot spent 6 months in development, where I was responsible for the design, machining, assembly and algorithm development. In the competition, the robot advanced two rounds before being eliminated by a critical motor failure that couldn’t be replaced before the next round.</p>
+	
 </body>
 </html>
+

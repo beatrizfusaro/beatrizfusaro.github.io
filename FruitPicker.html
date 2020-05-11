@@ -16,7 +16,7 @@
 		  <i class="fa fa-caret-down"></i>
 		</button>
 		<div class="dropdown-content">
-		  <a href="Animation.html">Animation and Graphics Design for Siemens</a>
+		  <a href="WRC.html">Webdesign and Social Media Campaign for WRC</a>
 		  <a href="UIDesign.html">UI Design for SCBA Monitoring</a>
 		</div>
 	  </div>
@@ -28,7 +28,7 @@
 		<div class="dropdown-content">
 		  <a href="AgRobot.html">Agricultural Robot for Monsanto</a>
 		  <a href="FruitPicker.html">Fruit Picker with NIRS for GTRI</a>
-		  <a href="Battlebots.html">Battlebots for Robojackets</a>
+		  <a href="Battlebots.html">SumoBot for Robojackets</a>
 		</div>
   	  </div>
 	  <div class="dropdown">
@@ -44,22 +44,25 @@
 	  
 	</div>
 	
-	<h2>Medical Image Visualization for Siemens</h2>
+	<h2>Fruit Picker with NIRS for GTRI</h2>
 	
-	<p>Siemens Healthcare recently developed a new type of MRI machine capable of giving numerical results for each of the measured tissue variables. With this in mind, I was tasked with creating a new visualization method capable of leveraging this data, allowing doctors to more easily identify issues with the normal tissue.</p>
-	
-	<p>Starting by researching current literature on visualization methods, I found promise in papers on bacteria and petri dish analysis. Using a similar approach, I created a preliminary algorithm that simply assigned the value of a variable to a color channel, resulting in characteristic hues for each kind of tissue. This program proved to be very useful in identifying different structures on the image. For example, bone would show in yellow, while white matter was a light pink. Despite this, tumors and bleeds had a similar composition to the brain matter around it, so I needed to refine this algorithm to show a better hue contrast.</p>
-	
-	<img src="MRI_fingerprinting_representation.jpg" style="display: block; margin-right: auto; margin-left: auto; width: 40%;">
-	<h6>Representation of MRI fingerprinting, with normal brain scan indicating the different brain structures</h6> 
-	
-	<p>After testing with several datasets, I decided to use clustering and assign hues based on the distance of a variable set to a cluster’s center. This approach allowed me to individually manipulate the color of each physiological structure, which resulted in a clear distinction between healthy tissue and tumors.</p>
-	
-	<img src="MRI_Fingerprinting_w_bleed.jpg" style="display: block; margin-right: auto; margin-left: auto; width: 40%;">
-	<h6>MRI scan of patient’s brain, with tumor highlighted in orange</h6> 
-	
-	<p>Because of the novelty of both of these approaches, I wrote and applied for a <a class="link" href="https://patents.google.com/patent/US20190108633A1/en" target="_blank">patent</a> on behalf of Siemens, and it was finally published in April 2019.</p>
+	<p>Fruit picking is a largely manual task. Ripe fruits can be easily bruised or damaged if handled roughly, so robots have a hard time safely retrieving them. Georgia Tech’s Research Institute developed a fruit picking robot capable of identifying the ripeness of a fruit and gently picking it. I was tasked with creating a system capable of accurately identifying if blueberries were ripe, and integrate it with a soft robotics claw that would retrieve the berry.</p>
 
+	<p>From literature review, I found that the concentrations of glycose in the fruit are the main indicator of ripeness, and those can be measured with near infrared spectroscopy. The challenge here was to create a compact NIRS system that could be attached to a robotic arm and claw.</p> 
+	
+	<img src="nirs-system.jpg" style="display: block; margin-right: auto; margin-left: auto; width: 50%;">
+	<h6>Common Near Infrared Spectroscopy setup, non portable</h6> 
+
+	<p>Spectroscopy works by shining a light into a material and capturing and interpreting the percentage of light reflected by it. There are tree wavelengths that are reflected by glycose, so the percentage of reflection of those three values could indicate how much sugar is in the berry. Two challenges became apparent: how to channel the light to the berry and how to avoid ambient light to get to the receiver.</p>
+
+	<p>I decided to use optical fiber to transfer the light to and from the berry, so that I could have all the light and processing fixtures in the robot, and not in the claw. I experimented with several different fiber diameters and configurations, finally settling on a hexagonal layout of 3mm fibers, which transmitted the highest light intensity. 
+	When trying to reduce ambient light contamination, I tried to create a dark chamber by creating an enclosure the berry could be surrounded by. However, while effective, this method couldn’t de easily used in an automated setting, since it would require precise positioning and another degree of motion to be able to encase the fruit. The final prototype involved a rubberized endpoint that sealed the fiber optics ends to the berry, and a correction algorithm was implemented, taking readings without shining a light to calibrate the data.</p>
+	
+	<img src="optic-fiber.jpg" style="display: block; margin-right: auto; margin-left: auto; width: 50%;">
+	<h6>Hexagonal optic fiber setup, with light emmiter and the center and six receivers around it</h6> 
+	
+	<p>Using a SVM to classify the data into ripe and unripe berries resulted in 90% accuracy in ripeness classification, when attached to the designed claw and exposed to intense ambient light.</p>
+	
 	
 	<footer>
 	</footer>

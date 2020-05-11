@@ -7,6 +7,7 @@ body {
 	padding: 0px;
 	margin-left: 15%;
 	margin-right: 15%;
+	margin-bottom: 100px;
 	width: 70%;
 	color: #070502;
 	background-color: #f0f0f0;
@@ -84,7 +85,7 @@ a.link {
 .navbar {
   overflow: hidden;
   font-family: "Excelsior", "Book Antiqua", Palatino, serif;
-  border-bottom: thin solid #070502;
+  border-bottom: medium solid #070502;
   background-color: #f0f0f0;
 }
 
@@ -176,15 +177,22 @@ a.title {
 	padding: 2.5%;
 }
 
+.container2 {
+	float: left;
+	width: 31%;
+	clear: none;
+	padding: 1%;
+}
+
 .frame {
     text-align: center;
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
-    perspective: 500px; 
+    perspective: 500px;
 }
 .frame img {
-    height: 60vh;
+    height: 65vh;
 	width: 100%;
 	object-fit: cover;
 }
